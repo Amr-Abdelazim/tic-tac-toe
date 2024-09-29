@@ -4,10 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="tic-tac-toe.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
   </head>
   <body>
+    <div class="nav-container">
+      <div class="X-container options">
+        <p>X</p>
+        <button class="X-human-btn">Human</button>
+        <button class="X-AI-btn">AI</button>
+        <label for="difficulty">Level:</label>
+        <select id="X-difficulty" name="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="O-container options">
+        <p>O</p>
+        <button class="O-human-btn">Human</button>
+        <button class="O-AI-btn">AI</button>
+        <label for="difficulty">Level:</label>
+        <select id="O-difficulty" name="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </div>
+
     <div class="grid_container"></div>
+    <button class="re-start-btn">re-start</button>
+    <div class="winPage hidden">
+      <h1></h1>
+      <p>Click anywhere to continue...</p>
+    </div>
   </body>
 </html>

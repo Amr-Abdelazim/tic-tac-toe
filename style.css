@@ -1,14 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.nav-container{
+    display: flex;
+}
+
+.X-container{
+    flex: 1 0 50%;
+    background-color: #9a0008;
+}
+
+.O-container {
+    flex: 1 0 50%;
+    background-color: #0f189a;
+}
+.options button{
+    width: 130px;
+    height: 40px;
+    margin: 5px;
+    font-size: 24px;
+    font-family: "Press Start 2P", system-ui;
+}
+.options button:hover,.options select:hover{
+    border: 2px solid black;
+}
+.options .btn-clicked{
+    border: 2px solid black;
+    background-color: black;
+    color: #9a0008;
+}
+.O-container .btn-clicked{
+    color: #0f189a;
+}
+
+.options p{
+   width: 60px;
+   height: 60px;
+   font-size: 60px;
+   margin-left: 50%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+.options label{
+    font-size: 24px;
+}
+.options select{
+    width: 180px;
+    height: 40px;
+    font-size: 24px;
+    text-align: center;
+    font-family: "Press Start 2P", system-ui;
+}
+
+.re-start-btn{
+    display: block;
+    width: 450px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 24px;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+}
+.re-start-btn:hover{
+    color: red;
+    border: 2px solid blue;
+}
+
 .grid_container{
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
     gap: 0;
-    width: 300px;
+    width: 450px;
     margin: 0 auto;
+    margin-top: 10px;
+    box-shadow:-10px 0 10px red,10px 0 10px blue;
 }
 
 .cell{
     box-sizing: border-box;
     border: 2px solid black;
     font-size: 32px;
+    font-family: "Press Start 2P", system-ui;
+    background-color: #d3d3d3;
 }
+.cell:hover{
+    background-color: rgb(190,190,190);
+}
+body .hidden {
+    display: none;
+}
+.winPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 100;
+}
+.winPage h1{
+    margin-bottom: 200px;
+}
+
+
